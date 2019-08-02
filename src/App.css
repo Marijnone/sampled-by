@@ -2,12 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -19,6 +13,42 @@
   color: white;
 }
 
+.artist-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--card-padding) var(--card-padding) 0 var(--card-padding);
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 6px;
+  box-shadow: 0 10px 45px rgba(0, 0, 0, 0.1);
+  background-image: url(https://images.unsplash.com/photo-1535082237804-f25137037270?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=92df1e550df7819b1cd23ebcb9e01d66&auto=format&fit=crop&w=1000&q=80);
+  background-size: cover;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.artist-card > h1 {
+  position: relative;
+  top: 4em;
+  left: -2em;
+}
+
+.discover-button {
+  width: 80%;
+  max-width: 215px;
+  height: 45px;
+  border-radius: 25px;
+  border: solid;
+  border-color: black;
+  color: black;
+  font-size: 19px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  background-color: transparent;
+  position: relative;
+  bottom: 5em;
+}
 .App-link {
   color: #61dafb;
 }
