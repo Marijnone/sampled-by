@@ -1,24 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
+import Intro from './components/Intro'
+import ArtistCard from './components/ArtistCard'
 import './App.css';
 
+
+
+//here i played around with props i give the artist card components the artist name and the image url
 function App() {
+
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Intro />
+     <ArtistCard Artist="Kanye West" img src='Image-1@2x.png'/>
+     <ArtistCard Artist="Kaytranada" img src='kaytra-header.jpg' />
+     <ArtistCard Artist="Dr Dre"     img src='dr-header@2x.png'/>
+     <ArtistCard Artist="A Tribe Called Quest" img src='tribe@2x.png'/>
+     {/* <ArtistCard Artist="Pharcyde" img src='tribe-header.jpg'/> */}
+
     </div>
   );
 }
