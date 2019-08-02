@@ -11,6 +11,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   /* grid-template-rows: 160px; */
+  height: 14em;
 }
 
 .artist-card img {
@@ -29,8 +30,9 @@ body {
 button {
   background: transparent;
   border-radius: 25px;
-  border: 2px solid palevioletred;
-  color: palevioletred;
+  border: 2px solid #000000;
+  background-color: #ffffff;
+  color: #000000;
   margin: 0.5em 1em;
   padding: 0.25em 1em;
   width: 8em;
