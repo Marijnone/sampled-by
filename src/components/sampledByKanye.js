@@ -3,7 +3,7 @@ import React from 'react'
 function SampledBy(props) {
     return (
         <div className="artist-container">
-        <img className="artist-header" alt="artist-header" src={require('/images/image-1@2x.png')}/>
+        {/* <img className="artist-header" alt="artist-header" src={require('')}/> */}
         <div className="sample-table">
         <h1>Original</h1>
         
