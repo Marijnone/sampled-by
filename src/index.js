@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
 import './index.css';
 import App from './App';
-import SampledByKanye from './components/sampledByKanye'
+// import SampledByKanye from './components/sampledByKanye'
 
 
 const routing = (
@@ -14,11 +14,11 @@ const routing = (
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/users">Users</Link>
+            <Link to="/artist:id"></Link>
           </li>
         </ul>
         <Route exact path="/" component={App} />
-        <Route path="/sampledbykanye" component={SampledByKanye} />
+        {/* <Route path="/sampledbykanye" component={SampledByKanye} /> */}
         {/* <Route path="/contact" component={Contact} /> */}
       </div>
     </Router>
