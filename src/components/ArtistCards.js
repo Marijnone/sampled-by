@@ -1,10 +1,14 @@
 
 import React from 'react'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import artistDetail from "./artistDetail";
+
+
+
 
 
 function ArtistCards(props) {
-    console.log(props);
+    // console.log(props);
     
 
     //little hairy but dynamic ternary system to make kaytranda white and tcq white could also take the length of the props maybe?
@@ -19,9 +23,9 @@ function ArtistCards(props) {
                     <Link to={`/artist/${props.artist.id}`}>
                     <button>Discover</button>
                 </Link>
+                {/* <Route path="/artist/:id" component={artistDetail} /> */}
             </div> 
            
-    
     )}
 
 

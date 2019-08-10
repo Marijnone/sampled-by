@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
+import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom'
 import './index.css';
 import App from './App';
-// import SampledByKanye from './components/sampledByKanye'
+import artistDetails from './components/artistDetail';
+import artistData from './components/artistData'
+
+
 
 
 const routing = (
@@ -13,12 +16,12 @@ const routing = (
           <li>
             <Link to="/">Home</Link>
           </li>
-          <li>
-            <Link to="/artist:id"></Link>
-          </li>
         </ul>
-        <Route exact path="/" component={App} />
-        {/* <Route path="/sampledbykanye" component={SampledByKanye} /> */}
+        <Switch>
+        <Route exact path="/" component={App}></Route>
+        <Route path="/artist/:id" component={artistDetails} />
+        {/* <Route component={Notfound} /> let thi sout for now maybe come in handy later */}
+      </Switch>
         {/* <Route path="/contact" component={Contact} /> */}
       </div>
     </Router>
