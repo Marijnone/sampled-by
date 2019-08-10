@@ -12,10 +12,11 @@ function ArtistCards(props) {
     return (
     
             <div className="artist-card">
-                <Link to={`/artist/${props.artist.id}`}>
+               
                     <img  alt="artist-header" src={props.artist.image}></img>
-                    <h1 style={{ color: props.artist.name === "Kaytranada" || props.artist.name === "A Tribe Called Quest" ? "white" : "black" }}>Sampled By {props.name}</h1>
+                    <h1>Sampled By {props.artist.name}</h1>
                     <p>{props.desc}</p>
+                    <Link to={`/artist/${props.artist.id}`}>
                     <button>Discover</button>
                 </Link>
             </div> 
