@@ -3,10 +3,6 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import artistDetail from "./artistDetail";
 
-
-
-
-
 function ArtistCards(props) {
     // console.log(props);
     

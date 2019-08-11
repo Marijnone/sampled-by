@@ -17,11 +17,12 @@ function App() {
   return (
 
     <div className="App">
-      {/* <Intro /> */}
-    {/* this is an array of components build in the above .map */}
-        {artistComponents}
-    </div>
-  );
+        <>
+          {artistComponents}
+          </>
+      </div>
+   
+  )
 }
 
 export default App;
