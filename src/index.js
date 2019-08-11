@@ -4,7 +4,7 @@ import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom'
 import './index.css';
 import App from './App';
 import artistDetails from './components/artistDetail';
-import artistData from './components/artistData'
+
 
 
 
@@ -22,7 +22,7 @@ const routing = (
         <Route path="/artist/:id" component={artistDetails} />
         {/* <Route component={Notfound} /> let thi sout for now maybe come in handy later */}
       </Switch>
-        {/* <Route path="/contact" component={Contact} /> */}
+      
       </div>
     </Router>
   )
