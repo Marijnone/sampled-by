@@ -1,8 +1,8 @@
 import React from 'react'
 import ArtistData from './artistData'
-import SpotifyAuth from '../spotifyAuth'
-import GetToken from '../spotifyAuth';
-
+// import SpotifyAuth from '../spotifyAuth'
+// import GetToken from '../spotifyAuth'
+import {GetToken} from '../App'
 
 function artistDetails(props) {
     console.log(props);
@@ -20,7 +20,7 @@ function artistDetails(props) {
                 <p>{artist.desc}</p>
             </div>
             <div className="spotify-data"> 
-                <button class="connect-spotify" onClick={GetToken}> Get connected with Spotify</button>
+                <button className="connect-spotify" onClick={GetToken}> Get connected with Spotify</button>
             </div>
 
         </div>
