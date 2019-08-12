@@ -1,8 +1,7 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -14,11 +13,20 @@ body {
   /* height: 14em; */
   margin: 1em;
   box-sizing: border-box;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  padding: 0em 0em 1em 0em;
+}
+artist-card p {
+  padding: 1em;
 }
 
 .artist-card img {
   width: 100%;
   height: 12em;
+}
+.h1-artist-card {
+  display: flex;
+  justify-self: center;
 }
 /* .artist-card h1 {
   display: grid;
@@ -29,6 +37,19 @@ body {
   padding-left: 0.5em;
 } */
 
+.artist-detail-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.artist-detail-container h1 {
+}
+
+.artist-detail-container img {
+  width: 100%;
+  height: 12em;
+}
+
 button {
   background: transparent;
   border-radius: 25px;
@@ -37,8 +58,9 @@ button {
   color: #000000;
   margin: 0.5em 1em;
   padding: 0.25em 1em;
-  width: 8em;
+  width: 9em;
   position: relative;
+  height: 3em;
 }
 .intro {
   font-size: 2em;

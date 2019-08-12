@@ -1,6 +1,7 @@
 import React from 'react'
 import ArtistData from './artistData'
-
+import SpotifyAuth from '../spotifyAuth'
+import GetToken from '../spotifyAuth';
 
 
 function artistDetails(props) {
@@ -9,18 +10,19 @@ function artistDetails(props) {
     const artist = ArtistData.find(artist => artist.id === props.match.params.id)
 
 
-    // const { params } = props.artist.match
-    // console.log(params);
-
     return (
         <div className="artist-detail-container">
-            <img alt="artist-header" src={artist.image}></img>
-
-            {/* <p>{params.id}</p> */}
+          <img alt="artist-header" src={artist.image}></img> 
+           
+            {/* <p>{props.match.params.id}</p> */}
             <div className="sample-table">
                 <h1>{artist.name}</h1>
                 <p>{artist.desc}</p>
             </div>
+            <div className="spotify-data"> 
+                <button class="connect-spotify" onClick={GetToken}> Get connected with Spotify</button>
+            </div>
+
         </div>
     )
 

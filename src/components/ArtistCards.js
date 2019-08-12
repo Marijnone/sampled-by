@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import artistDetail from "./artistDetail";
 
 function ArtistCards(props) {
-    // console.log(props);
+    console.log(props);
 
 
     //little hairy but dynamic ternary system to make kaytranda white and tcq white could also take the length of the props maybe?
@@ -14,12 +14,12 @@ function ArtistCards(props) {
         <div className="artist-card">
 
             <img alt="artist-header" src={props.artist.image}></img>
-                <h1>Sampled By {props.artist.name}</h1>
-                <p>{props.desc}</p>
-                <Link to={`/artist/${props.artist.id}`}>
-                     <button>Discover</button>
-                </Link>
-            {/* <Route path="/artist/:id" component={artistDetail} /> */}
+            <h1 className="h1-artist-card">Sampled By {props.artist.name}</h1>
+
+            <p>{props.desc}</p>
+            <Link to={`/artist/${props.artist.id}`}>
+                <button>Discover</button>
+            </Link>
         </div>
 
     )
