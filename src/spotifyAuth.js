@@ -21,11 +21,17 @@ window.location.hash = "";
 // Set token
 let _token = hash.access_token;
 
+
+
+
+
+
+
 const authEndpoint = "https://accounts.spotify.com/authorize";
 
 // Replace with your app's client ID, redirect URI and desired scopes
 const clientId = "5dffda321ef44de7b28e59b32f030be7";
-const redirectUri = "https://sampled-by.netlify.com/";
+const redirectUri = "http://localhost:3000/artist/";
 const scopes = [""];
 
 // If there is no token, redirect to Spotify authorization
@@ -33,19 +39,21 @@ const scopes = [""];
 // alert("si")
 // }
 
-function GetToken() {
+export function GetToken() {
     window.location = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
         "%20"
     )}&response_type=token&show_dialog=true`;
 }
 
-try {
-    fetch("https://api.spotify.com/v1/artists/2N2hOy7cgLlfage0jrE1Kb/albums", {
-        headers: {
-            Accept: "application/json",
-            Authorization: "Bearer " + _token
-        }
-    })
+
+
+// try {
+//     fetch("https://api.spotify.com/v1/artists/2N2hOy7cgLlfage0jrE1Kb/albums", {
+//         headers: {
+//             Accept: "application/json",
+//             Authorization: "Bearer " + _token
+//         }
+//     })
         // .then(response => response.json())
         // .then(data => {
         //     console.log(data);
@@ -58,9 +66,9 @@ try {
         // .then(albums => {
         //     console.log(albums);
         // })
-} catch (error) {
-    console.log(error);
-}
+// } catch (error) {
+//     console.log(error);
+// }
 
 
 
