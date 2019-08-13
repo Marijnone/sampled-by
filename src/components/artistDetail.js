@@ -18,8 +18,9 @@ function artistDetails(props) {
             <div className="sample-table">
                 <h1>{artist.name}</h1>
                 <p>{artist.desc}</p>
+                <p></p>
             </div>
-            <div className="spotify-data"> 
+            <div style={} className="spotify-data"> 
                 <button className="connect-spotify" onClick={GetToken}> Get connected with Spotify</button>
             </div>
 

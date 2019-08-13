@@ -5,6 +5,7 @@ import ArtistCards from './components/ArtistCards';
 import './App.css';
 import artistData from './components/artistData'
 import artist from './components/artistData';
+import { SpotifyApiContext, Artist } from 'react-spotify-api';
 
 // import Gettoken from './spotifyAuth'
 //redirect and acces token set
@@ -56,11 +57,13 @@ export function GetToken() {
 //     <div className="App">
 //       {/* <SpotifyApiContext.Provider value={token}> */}
 //         {artistComponents}
-//         {/* </SpotifyApiContext.Provider> */}
+        // {/* </SpotifyApiContext.Provider> */}
 //     </div>
 
 //   )
 // }
+
+
 
 class App extends React.Component {
   constructor() {
@@ -71,14 +74,14 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    // Set token
+    // Set token and also to presit save
     let _token = hash.access_token;
-
     if (_token) {
       // Set token
       this.setState({
         token: _token
       });
+      window.localStorage.setItem('token', _token);
     
     }else{
       console.log('no token :(');
@@ -91,11 +94,13 @@ class App extends React.Component {
       <ArtistCards key={artist.id} artist={artist} name={artist.name} image={artist.image} desc={artist.desc} />)
 
     return (
+       <SpotifyApiContext.Provider value={this.state.token}> 
       <div className="App">
           <h1> {this.state.token}</h1>
         {artistComponents} 
-     
+        
       </div>
+      </SpotifyApiContext.Provider>
     )
   }
   
