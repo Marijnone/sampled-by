@@ -4,7 +4,7 @@ import Intro from './components/Intro';
 import ArtistCards from './components/ArtistCards';
 import './App.css';
 import artistData from './components/artistData'
-import artist from './components/artistData';
+// import artistData from './components/artistData';
 import { SpotifyApiContext, Artist } from 'react-spotify-api';
 
 // import Gettoken from './spotifyAuth'
@@ -41,7 +41,7 @@ const scopes = [""];
 // alert("si")
 // }
 
-export function GetToken() {
+export function GetToken(redirecturi) {
   window.location = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
     "%20"
   )}&response_type=token&show_dialog=true`;
@@ -63,16 +63,14 @@ export function GetToken() {
 //   )
 // }
 
-
-
 class App extends React.Component {
   constructor() {
     super()
     this.state = {
+      artistData: artistData,
       token: null
     }
   }
-
   componentDidMount() {
     // Set token and also to presit save
     let _token = hash.access_token;
@@ -90,11 +88,12 @@ class App extends React.Component {
   }
   render() {
     // MAPPPP the components with the right props, so the component gets the right data
-    const artistComponents = artistData.map(artist =>
+    const artistComponents = this.state.artistData.map(artist =>
       <ArtistCards key={artist.id} artist={artist} name={artist.name} image={artist.image} desc={artist.desc} />)
 
     return (
-       <SpotifyApiContext.Provider value={this.state.token}> 
+       <SpotifyApiContext.Provider value={window.localStorage.getItem('token')}> 
+      
       <div className="App">
           <h1> {this.state.token}</h1>
         {artistComponents} 
