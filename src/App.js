@@ -33,7 +33,7 @@ window.location.hash = "";
 const authEndpoint = "https://accounts.spotify.com/authorize";
 // Replace with your app's client ID, redirect URI and desired scopes
 const clientId = "5dffda321ef44de7b28e59b32f030be7";
-const redirectUri = "https://sampled-by.netlify.com/artist/";
+const redirectUri = "https://sampled-by.netlify.com";
 const scopes = [""];
 
 // If there is no token, redirect to Spotify authorization
